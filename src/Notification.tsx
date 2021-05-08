@@ -4,7 +4,7 @@ import {NotificationType} from './types';
 
 export const Notification: FC<NotificationPropsType> = ({ notification }) => {
     return (
-        <Alert severity={notification.level} variant="filled">
+        <Alert severity={notification.level} variant="filled" className="react-material-notify__notification">
             {notification.message}
         </Alert>
     )
