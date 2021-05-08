@@ -1,30 +1,32 @@
-import {useContext, useEffect, useState} from 'react';
+import {useCallback, useContext, useEffect, useRef} from 'react';
 import {NotificationContext} from './context';
 import {ActionKind, NotificationType} from './types';
 
 export const useNotifications = () => {
     const context = useContext(NotificationContext)!;
-    const [timeoutIds, setTimeoutIds] = useState<number[]>([]);
+    const timeoutIdsRef = useRef<number[]>([]);
 
     useEffect(() => {
-       return () => {
-           timeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
-       };
-    });
+        const timeoutIds = timeoutIdsRef.current;
+        return () => {
+            timeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
+        };
+    }, []);
 
     const { dispatch } = context;
 
-    const createNotification = (notification: NotificationType) => {
+    const createNotification = useCallback((notification: NotificationType) => {
         const notificationId = notification.id ?? Date.now();
         const notificationDuration = notification.duration ?? 5000;
 
         dispatch({ type: ActionKind.ShowNotification, payload: { ...notification, id: notificationId } });
 
-        setTimeoutIds(timeoutIds.concat(window.setTimeout(
+        timeoutIdsRef.current.push(window.setTimeout(
             () => dispatch({ type: ActionKind.CloseNotification, payload: notificationId }),
             notificationDuration
-        )));
-    };
+        ));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return { createNotification };
 }
