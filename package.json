@@ -29,6 +29,15 @@
     "compile-ts": "tsc",
     "test": "react-scripts test"
   },
+  "author": {
+    "name": "Nikita Odnorob"
+  },
+  "description": "A package for simple creating notifications",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitaodnorob/react-material-notify.git"
+  },
+  "keywords": ["notificate", "notification"],
   "eslintConfig": {
     "extends": [
       "react-app",
