@@ -1,0 +1,9 @@
+{
+  "printWidth": 120,
+  "trailingComma": "all",
+  "jsxSingleQuote": false,
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "tabWidth": 2,
+  "parser": "typescript"
+}
