@@ -2,13 +2,21 @@
   "compilerOptions": {
     "target": "es6",
     "outDir": "./lib",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "react"
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "**/__tests__/*",
