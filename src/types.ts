@@ -1,11 +1,6 @@
 import React from 'react';
 
-export enum NotificationLevelType {
-    INFO = 'info',
-    SUCCESS = 'success',
-    WARNING = 'warning',
-    ERROR = 'error'
-}
+export type NotificationLevelType = 'info' | 'success' | 'warning' | 'error';
 
 export type NotificationType = {
     id?: number | string;
