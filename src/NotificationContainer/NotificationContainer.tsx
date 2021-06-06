@@ -1,8 +1,7 @@
 import React, {FC, useReducer} from 'react';
-import {Notification} from './Notification';
-import {initialState, NotificationContext, reducer} from './context';
-
-import './styles/NotificationContainer.css';
+import {Notification} from '../Notification';
+import {initialState, NotificationContext, reducer} from '../context';
+import '../styles/NotificationContainer.css';
 
 export const NotificationContainer: FC = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
