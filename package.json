@@ -28,7 +28,7 @@
     "test": "react-scripts test --watchAll=false",
     "test-watch": "react-scripts test && git checkout tsconfig.json",
     "posttest": "git checkout tsconfig.json",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\"",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\"",
     "prepare": "npm run compile-ts",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
