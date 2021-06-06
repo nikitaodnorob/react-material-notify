@@ -21,6 +21,7 @@
     "node_modules",
     "**/__tests__/*",
     "**/*.test.*",
-    "./src/setupTests.ts"
+    "./src/setupTests.ts",
+    "./src/react-app-env.d.ts"
   ]
 }
