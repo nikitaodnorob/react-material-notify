@@ -1,7 +1,6 @@
 {
   "name": "react-material-notify",
   "version": "0.0.1",
-  "private": true,
   "main": "lib/index.js",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -26,14 +25,14 @@
   "scripts": {
     "compile-ts": "tsc && copyfiles -u 1 src/*/*.module.css lib",
     "lint": "eslint src/",
-    "test": "react-scripts test",
-    "test-no-watch": "react-scripts test --watchAll=false && git checkout tsconfig.json",
+    "test": "react-scripts test --watchAll=false",
+    "test-watch": "react-scripts test && git checkout tsconfig.json",
     "posttest": "git checkout tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\"",
-    "prepare" : "npm run compile-ts",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format"
+    "prepare": "npm run compile-ts",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format"
   },
   "author": {
     "name": "Nikita Odnorob"
@@ -65,5 +64,7 @@
       "last 1 safari version"
     ]
   },
-  "files": ["lib"]
+  "files": [
+    "lib"
+  ]
 }

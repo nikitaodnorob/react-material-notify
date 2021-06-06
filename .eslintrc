@@ -15,5 +15,5 @@
   "env": {
     "jest": true
   },
-  "ignorePatterns": ["setupTests.ts"]
+  "ignorePatterns": ["setupTests.ts", "react-app-env.d.ts"]
 }
