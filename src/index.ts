@@ -1,7 +1,7 @@
-import {NotificationContainer} from './NotificationContainer';
-import {useNotifications} from './useNotifications';
+import { NotificationContainer } from './NotificationContainer';
+import { useNotifications } from './useNotifications';
 
 export {
-    NotificationContainer,
-    useNotifications,
+  NotificationContainer,
+  useNotifications,
 };
