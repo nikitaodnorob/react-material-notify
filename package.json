@@ -19,12 +19,14 @@
     "@types/jest": "^26.0.23",
     "copyfiles": "^2.4.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
+    "prettier": "^2.3.1",
     "react-scripts": "4.0.3",
     "typescript": "^4.2.4"
   },
   "scripts": {
     "compile-ts": "tsc && copyfiles -u 1 src/*/*.module.css lib",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\""
   },
   "author": {
     "name": "Nikita Odnorob"

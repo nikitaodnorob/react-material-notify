@@ -9,9 +9,9 @@ export const NotificationContainer: FC = ({ children }) => {
   return (
     <NotificationContext.Provider value={{ state, dispatch }}>
       <div className={styles['react-material-notify__container']}>
-        {state.map(
-          (notification) => <Notification notification={notification} key={notification.id} />,
-        )}
+        {state.map((notification) => (
+          <Notification notification={notification} key={notification.id} />
+        ))}
       </div>
       {children}
     </NotificationContext.Provider>

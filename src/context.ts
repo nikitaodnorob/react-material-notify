@@ -8,7 +8,8 @@ export const initialState: NotificationType[] = [];
 export const reducer = (state: NotificationType[], action: ActionType) => {
   if (action.type === ActionKind.ShowNotification) {
     return state.concat(action.payload);
-  } if (action.type === ActionKind.CloseNotification) {
+  }
+  if (action.type === ActionKind.CloseNotification) {
     return state.filter((notification) => notification.id !== action.payload);
   }
   return state;

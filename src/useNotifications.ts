@@ -24,10 +24,12 @@ export const useNotifications = () => {
       payload: { ...notification, id: notificationId },
     });
 
-    timeoutIdsRef.current.push(window.setTimeout(
-      () => dispatch({ type: ActionKind.CloseNotification, payload: notificationId }),
-      notificationDuration,
-    ));
+    timeoutIdsRef.current.push(
+      window.setTimeout(
+        () => dispatch({ type: ActionKind.CloseNotification, payload: notificationId }),
+        notificationDuration,
+      ),
+    );
   }, []);
 
   return { createNotification };

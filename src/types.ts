@@ -24,5 +24,5 @@ export enum ActionKind {
 }
 
 export type ActionType =
-    { type: ActionKind.ShowNotification, payload: NotificationType } |
-    { type: ActionKind.CloseNotification, payload: number | string };
+  | { type: ActionKind.ShowNotification; payload: NotificationType }
+  | { type: ActionKind.CloseNotification; payload: number | string };

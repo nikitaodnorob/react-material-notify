@@ -8,7 +8,9 @@
   "rules": {
     "import/prefer-default-export": "off",
     "object-curly-newline": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "max-len": ["error", 120],
+    "eol-last": "error"
   },
   "env": {
     "jest": true
