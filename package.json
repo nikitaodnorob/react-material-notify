@@ -27,6 +27,8 @@
     "compile-ts": "tsc && copyfiles -u 1 src/*/*.module.css lib",
     "lint": "eslint src/",
     "test": "react-scripts test",
+    "test-no-watch": "react-scripts test --watchAll=false && git checkout tsconfig.json",
+    "posttest": "git checkout tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\"",
     "prepare" : "npm run compile-ts",
     "prepublishOnly" : "npm test && npm run lint",
