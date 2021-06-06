@@ -25,8 +25,13 @@
   },
   "scripts": {
     "compile-ts": "tsc && copyfiles -u 1 src/*/*.module.css lib",
+    "lint": "eslint src/",
     "test": "react-scripts test",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\""
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"lib/**/*.js\" \"lib/**/*.jsx\"",
+    "prepare" : "npm run compile-ts",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format"
   },
   "author": {
     "name": "Nikita Odnorob"
@@ -57,5 +62,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": ["lib"]
 }
