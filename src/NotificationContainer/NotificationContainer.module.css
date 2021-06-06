@@ -1,4 +1,4 @@
-.react-material-notify__container {
+.container {
     display: flex;
     flex-direction: column-reverse;
 
@@ -6,8 +6,4 @@
     left: calc(100vw - 450px);
     right: 8px;
     bottom: 8px;
-}
-
-.react-material-notify__container > .react-material-notify__notification {
-    margin-bottom: 8px;
 }
