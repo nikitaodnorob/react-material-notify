@@ -15,8 +15,8 @@ or
 yarn add react-material-notify
 ```
 
-## How it looks?
-<img src="https://user-images.githubusercontent.com/24944339/120903379-81a8bc80-c64e-11eb-8633-db3d73202f15.png" width="70%" />
+## Demo
+[CodeSandbox](https://codesandbox.io/s/react-material-notify-demo-c1fkh)
 
 ## Do you have a bug report or improvement idea?
 Please, open the issue! :)
