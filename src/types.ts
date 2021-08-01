@@ -7,7 +7,7 @@ export type NotificationType = {
   level: NotificationLevelType;
   title?: string | null;
   message: string;
-  duration?: number;
+  duration?: number | 'forever';
   canClose?: boolean;
 
   onClose?: (notification: NotificationType) => void;
