@@ -38,10 +38,13 @@
     "name": "Nikita Odnorob"
   },
   "description": "A package for simple creating notifications",
+  "homepage": "https://github.com/nikitaodnorob/react-material-notify#readme",
+  "bugs": "https://github.com/nikitaodnorob/react-material-notify/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nikitaodnorob/react-material-notify.git"
   },
+  "license": "MIT",
   "keywords": [
     "notificate",
     "notification"
