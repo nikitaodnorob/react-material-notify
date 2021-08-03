@@ -1,6 +1,6 @@
 # react-material-notify
 
-![NPM v0.1.2](https://badgen.net/npm/v/react-material-notify?cache=600)
+[![NPM v0.1.2](https://badgen.net/npm/v/react-material-notify?cache=600)](https://www.npmjs.com/package/react-material-notify)
 ![MIT license](https://badgen.net/npm/license/react-material-notify?cache=86400)
 ![Types](https://badgen.net/npm/types/react-material-notify?cache=600)
 ![172 bytes after minimized](https://badgen.net/bundlephobia/min/react-material-notify?color=green&cache=600)
