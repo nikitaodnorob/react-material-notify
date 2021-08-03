@@ -1,8 +1,14 @@
 # react-material-notify
 
+![NPM v0.1.2](https://badgen.net/npm/v/react-material-notify?cache=600)
+![MIT license](https://badgen.net/npm/license/react-material-notify?cache=86400)
+![Types](https://badgen.net/npm/types/react-material-notify?cache=600)
+![172 bytes after minimized](https://badgen.net/bundlephobia/min/react-material-notify?color=green&cache=600)
+![171 bytes after minimized and GZIP](https://badgen.net/bundlephobia/minzip/react-material-notify?color=green&cache=600)
+
 This package can help you to create and display notifications in your React application
 
-The package is tiny, less than 3 KB!
+The package is tiny, 172 bytes!
 
 It's in active development stage now. Current plans can be found in Issues
 
