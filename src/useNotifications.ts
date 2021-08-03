@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useRef } from 'react';
 import { NotificationContext } from './context';
 import { ActionKind, NotificationType } from './types';
 
-export const useNotifications = () => {
+export function useNotifications() {
   const context = useContext(NotificationContext)!;
   const timeoutIdsRef = useRef<number[]>([]);
 
@@ -16,7 +16,7 @@ export const useNotifications = () => {
   const { dispatch } = context;
 
   const createNotification = useCallback((notification: NotificationType) => {
-    const notificationId = notification.id ?? Date.now();
+    const notificationId = notification.id || Date.now();
     const notificationDuration = notification.duration ?? 5000;
 
     dispatch({
@@ -24,13 +24,15 @@ export const useNotifications = () => {
       payload: { ...notification, id: notificationId },
     });
 
-    timeoutIdsRef.current.push(
-      window.setTimeout(
-        () => dispatch({ type: ActionKind.CloseNotification, payload: notificationId }),
-        notificationDuration,
-      ),
-    );
+    if (notificationDuration !== 'forever' && notificationDuration > 0) {
+      timeoutIdsRef.current.push(
+        window.setTimeout(
+          () => dispatch({ type: ActionKind.CloseNotification, payload: notificationId }),
+          notificationDuration,
+        ),
+      );
+    }
   }, []);
 
   return { createNotification };
-};
+}

@@ -5,12 +5,12 @@ export type NotificationLevelType = 'info' | 'success' | 'warning' | 'error';
 export type NotificationType = {
   id?: number | string;
   level: NotificationLevelType;
-  title?: string | null;
+  // title?: string | null;
   message: string;
-  duration?: number;
-  canClose?: boolean;
+  duration?: number | 'forever';
+  // canClose?: boolean;
 
-  onClose?: (notification: NotificationType) => void;
+  // onClose?: (notification: NotificationType) => void;
 };
 
 export type NotificationContextType = {

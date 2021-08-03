@@ -5,7 +5,7 @@ export const NotificationContext = React.createContext<NotificationContextType |
 
 export const initialState: NotificationType[] = [];
 
-export const reducer = (state: NotificationType[], action: ActionType) => {
+export function reducer(state: NotificationType[], action: ActionType) {
   if (action.type === ActionKind.ShowNotification) {
     return state.concat(action.payload);
   }
@@ -13,4 +13,4 @@ export const reducer = (state: NotificationType[], action: ActionType) => {
     return state.filter((notification) => notification.id !== action.payload);
   }
   return state;
-};
+}

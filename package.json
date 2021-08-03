@@ -1,6 +1,6 @@
 {
   "name": "react-material-notify",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "compile-ts": "tsc && copyfiles -u 1 src/*/*.module.css lib",
-    "lint": "eslint src/",
+    "lint": "eslint src/ demo/",
     "test": "react-scripts test --watchAll=false",
     "test-watch": "react-scripts test && git checkout tsconfig.json",
     "posttest": "git checkout tsconfig.json",
@@ -38,10 +38,13 @@
     "name": "Nikita Odnorob"
   },
   "description": "A package for simple creating notifications",
+  "homepage": "https://github.com/nikitaodnorob/react-material-notify#readme",
+  "bugs": "https://github.com/nikitaodnorob/react-material-notify/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nikitaodnorob/react-material-notify.git"
   },
+  "license": "MIT",
   "keywords": [
     "notificate",
     "notification"

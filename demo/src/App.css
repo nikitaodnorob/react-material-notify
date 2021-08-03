@@ -11,6 +11,14 @@ body {
     height: 100vh;
 }
 
+.App .row:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+.timeout {
+    width: 400px
+}
+
 .button {
     width: 500px;
     height: 50px;
@@ -23,8 +31,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-top: 16px;
 }
 
 .button:hover {
