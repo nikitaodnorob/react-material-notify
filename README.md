@@ -8,7 +8,7 @@
 
 This package can help you to create and display notifications in your React application
 
-The package is tiny, 172 bytes!
+The package is tiny, the own bundle size is 172 bytes!
 
 It's in active development stage now. Current plans can be found in Issues
 
